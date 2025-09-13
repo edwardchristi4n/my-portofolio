@@ -1,0 +1,99 @@
+:root{
+    --primary:  #ffed00
+    --bg: #010101
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg);
+    color: #fff;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    gap: 20px; 
+    padding: 0.7rem 7%;
+    background-color: rgb(1, 1, 1);
+    border-bottom: 1px solid #cbce1e;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .navbar-logo{
+    font-size: 35px;
+    font-weight: 700;
+    color: #ffed00;
+    font-style: italic;
+}
+
+.navbar .navbar-logo span{
+    color: antiquewhite;
+}
+
+.navbar .navbar-navigation a{
+    color: antiquewhite;
+    display: inline-block;
+    font-size: 20px;
+    margin: 1rem;
+    font-weight: 600;
+    position: relative;
+    text-decoration: none;
+    transition: color 0.3 ease;
+}
+
+.navbar .navbar-navigation{
+    margin-left: auto;
+    margin-right: 30px;
+    display: flex;
+}
+
+.navbar .navbar-navigation a:hover {
+  color: #d8cb19;
+}
+
+.navbar .navbar-navigation a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px; /* jarak garis dari teks */
+  width: 0%;
+  height: 2px;
+  background-color: #d8cb19;
+  transition: width 0.3s ease;
+}
+
+.navbar .navbar-navigation a:hover::after {
+  width: 100%;
+}
+
+.navbar .navbar-extra a{
+    color: #fff;
+    font-size: 20px;
+    display: inline-block;
+    transition: color 0.3 ease;
+}
+
+.navbar .navbar-extra a:hover{
+    color: #ffed00;
+}
+
+#hamburger-menu{
+    display: none;
+}
+
+/*Media Querries*/
